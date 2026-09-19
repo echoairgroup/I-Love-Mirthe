@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0b090c">
-  <meta name="description" content="Een klein plekje op het internet, speciaal voor Mirthe.">
+  <meta name="description" content="Een klein digitaal plekje voor Mirthe — 6 maanden met Christian.">
   <meta property="og:title" content="Voor Mirthe ♥">
-  <meta property="og:description" content="Een klein plekje op het internet, speciaal voor ons.">
+  <meta property="og:description" content="20 maart 2026 — 20 september 2026">
   <title>Voor Mirthe ♥</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,17 +16,17 @@
 <body class="locked">
 <div id="hearts" class="floating-hearts" aria-hidden="true"></div>
 
-<section id="lockScreen" class="lock-screen">
+<section id="lockScreen" class="lock-screen" aria-label="Privépagina">
   <div class="lock-orb orb-a"></div><div class="lock-orb orb-b"></div>
   <div class="lock-content">
     <div class="mini-heart">♥</div>
     <p class="eyebrow">Een klein plekje voor ons</p>
     <h1>Voor <em>Mirthe.</em></h1>
     <p class="lock-copy">Er zit iets kleins achter deze deur. Alleen voor jou.</p>
-    <form id="passwordForm" class="password-form">
+    <form id="passwordForm" class="password-form" novalidate>
       <label class="sr-only" for="password">Wachtwoord</label>
       <div class="password-wrap">
-        <input id="password" type="password" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="••••">
+        <input id="password" type="password" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="••••" aria-describedby="passwordMessage">
         <button type="button" id="showPassword" class="eye-button" aria-label="Wachtwoord tonen">○</button>
       </div>
       <button class="primary-button" type="submit">Openen <span>→</span></button>
@@ -39,13 +39,13 @@
 <main id="site" class="site" aria-hidden="true">
   <header class="nav">
     <a class="brand" href="#top" aria-label="Naar boven">M<span>♥</span>C</a>
-    <nav>
+    <nav aria-label="Hoofdnavigatie">
       <a href="#voor-jou">Voor jou</a>
       <a href="#herinneringen">Herinneringen</a>
       <a href="#muziek">Ons liedje</a>
       <a href="#toekomst">Later</a>
     </nav>
-    <button id="musicButton" class="music-button" aria-label="Muziek aan of uit"><span>♫</span><i></i></button>
+    <button id="musicButton" class="music-button" aria-label="Muziek aan of uit"><span>♫</span></button>
   </header>
 
   <section id="top" class="hero">
@@ -56,7 +56,7 @@
       <p class="hero-line">Zes maanden samen.<br><strong>En toch voelt het nog steeds als het begin.</strong></p>
       <a class="scroll-link" href="#voor-jou"><span>↓</span> ontdek dit kleine hoekje</a>
     </div>
-    <div class="hero-side-note">01 / 06<br><span>speciaal voor jou</span></div>
+    <div class="hero-side-note">01 / 08<br><span>speciaal voor jou</span></div>
     <div class="hero-date">20.03.26 <span>♥</span> 20.09.26</div>
   </section>
 
@@ -66,73 +66,102 @@
       <p class="eyebrow">Lieve Mirthe,</p>
       <div>
         <h3>Je hebt het boekje gezien.<br><em>Maar ik had nog iets.</em></h3>
-        <p class="large-copy">Het boekje vertelt ons verhaal. Dit is iets anders. Een klein plekje op het internet dat alleen voor ons is. Met dingen die ik niet in een boekje kon stoppen, kleine verrassingen en vooral één hele simpele boodschap: ik ben ontzettend blij dat jij er bent.</p>
+        <p class="large-copy">Het boekje vertelt ons verhaal. Deze website hoeft dat niet opnieuw te doen. Dit is gewoon het digitale stukje dat ik er nog bij wilde maken: voor de kleine dingen, onze grapjes, muziek, herinneringen en alles wat nog moet gebeuren.</p>
         <p class="signature">— Christian <span>♥</span></p>
       </div>
     </div>
   </section>
 
-  <section class="manifesto section">
-    <div class="manifesto-inner reveal">
-      <p class="eyebrow">Geen boekje. Geen cadeau. Gewoon iets extra's.</p>
-      <h3>Een digitale plek voor<br><em>onze kleine momenten.</em></h3>
-      <div class="manifesto-grid">
-        <div><span>01</span><p>Dingen die ik nooit wil vergeten.</p></div>
-        <div><span>02</span><p>Dingen die ik soms niet hardop zeg.</p></div>
-        <div><span>03</span><p>Dingen die we nog samen gaan meemaken.</p></div>
+  <section class="origin section">
+    <div class="origin-inner reveal">
+      <div>
+        <p class="eyebrow">02 · Hoe het eigenlijk begon</p>
+        <h3>Van het techniek lokaal<br><em>naar zes maanden wij.</em></h3>
       </div>
+      <div class="origin-story">
+        <div class="origin-step"><span>01</span><div><strong>School / FLL</strong><p>Daar leerden we elkaar kennen. Eerst gewoon elkaar steeds beter leren kennen.</p></div></div>
+        <div class="origin-step"><span>02</span><div><strong>Het techniek lokaal van JenaXL</strong><p>En toen vroeg jij mij. Midden in het techniek lokaal. Daar begon het officieel.</p></div></div>
+        <div class="origin-step"><span>03</span><div><strong>20 maart 2026</strong><p>Onze datum. Het begin van alles wat daarna kwam.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="moments section">
+    <div class="section-heading reveal">
+      <div><p class="eyebrow">03 · Onze versie van normaal</p><h3>Een paar dingen die<br><em>ik nooit normaal ga vinden.</em></h3></div>
+      <p>Omdat sommige momenten klein lijken totdat je beseft hoeveel ze voor je betekenen.</p>
+    </div>
+    <div class="moment-grid">
+      <article class="moment-card reveal"><span>01</span><h4>Skateboards & Zwolle</h4><p>Onze eerste echte afspraak: samen skateboarden in Park het Wezenlanden.</p></article>
+      <article class="moment-card reveal"><span>02</span><h4>De boot naar Terschelling</h4><p>Het moment dat jij mij opwachtte bij de boot. En daarna natuurlijk de dag op Terschelling.</p></article>
+      <article class="moment-card reveal"><span>03</span><h4>Schoolpauzes</h4><p>Zelfs een gewone pauze werd iets om naar uit te kijken, gewoon omdat jij er was.</p></article>
+      <article class="moment-card reveal"><span>04</span><h4>Thuis bij jou</h4><p>Mijn favoriete plek met jou. Niet omdat er iets bijzonders hoeft te gebeuren, maar omdat wij daar gewoon onszelf zijn.</p></article>
     </div>
   </section>
 
   <section id="herinneringen" class="memories section">
     <div class="section-heading reveal">
-      <div><p class="eyebrow">02 · Kleine momenten</p><h3>Herinneringen die<br><em>ik wil bewaren.</em></h3></div>
-      <p>Dit is niet het boekje opnieuw. Dit zijn de kleine extra's.</p>
+      <div><p class="eyebrow">04 · Foto's & verhalen</p><h3>Vier foto's.<br><em>Veel meer erachter.</em></h3></div>
+      <p>Ik heb expres ruimte gelaten voor jullie echte foto's. Zet ze in <code>assets/</code> als <code>photo1.jpg</code> t/m <code>photo4.jpg</code>.</p>
     </div>
     <div class="photo-grid">
-      <button class="memory-card memory-a reveal" data-title="Een moment van ons" data-text="Zet hier later een foto en het verhaal achter dit moment."><span class="photo-placeholder">JULLIE<br>FOTO</span><span class="memory-caption">een dag die ik wil onthouden</span></button>
-      <button class="memory-card memory-b reveal" data-title="Gewoon wij" data-text="Een foto die misschien heel normaal lijkt, maar voor mij alles zegt."><span class="photo-placeholder">JULLIE<br>FOTO</span><span class="memory-caption">gewoon wij</span></button>
-      <button class="memory-card memory-c reveal" data-title="Deze wil ik houden" data-text="Voeg hier een klein verhaaltje toe dat alleen jullie begrijpen."><span class="photo-placeholder">JULLIE<br>FOTO</span><span class="memory-caption">een kleine herinnering</span></button>
-      <button class="memory-card memory-d reveal" data-title="En nog heel veel meer" data-text="Vier foto's zijn natuurlijk lang niet genoeg. Dit wordt alleen maar groter."><span class="photo-placeholder">JULLIE<br>FOTO</span><span class="memory-caption">dit is nog maar het begin</span></button>
+      <button class="memory-card memory-a reveal" data-image="assets/photo1.jpg" data-title="Terschelling" data-text="Een dag die ik niet snel vergeet. Jij, ik, Terschelling en gewoon samen zijn."><span class="photo-placeholder">FOTO 01<br><small>TERSchelling</small></span><span class="memory-caption">een dag die ik wil onthouden</span></button>
+      <button class="memory-card memory-b reveal" data-image="assets/photo2.jpg" data-title="Gewoon wij" data-text="Een van die foto's die misschien niet alles uitlegt, maar mij meteen weer aan ons laat denken."><span class="photo-placeholder">FOTO 02<br><small>GEWOON WIJ</small></span><span class="memory-caption">gewoon wij</span></button>
+      <button class="memory-card memory-c reveal" data-image="assets/photo3.jpg" data-title="Een klein moment" data-text="Stad, thuis, school of ergens ertussenin. De plek is minder belangrijk dan met wie ik er ben."><span class="photo-placeholder">FOTO 03<br><small>ONZE HERINNERING</small></span><span class="memory-caption">een kleine herinnering</span></button>
+      <button class="memory-card memory-d reveal" data-image="assets/photo4.jpg" data-title="Zes maanden" data-text="Vier foto's zijn eigenlijk veel te weinig. Gelukkig hebben we nog heel veel tijd om deze verzameling groter te maken."><span class="photo-placeholder">FOTO 04<br><small>20 · 09 · 2026</small></span><span class="memory-caption">dit is nog maar het begin</span></button>
     </div>
-    <p class="gallery-hint reveal">Later kunnen hier jullie echte foto's in komen. ♥</p>
+    <p class="gallery-hint reveal">Klik op een foto voor het verhaal. Als er nog geen foto staat, zie je gewoon deze tijdelijke versie. ♥</p>
   </section>
 
   <section class="reasons section">
     <div class="reasons-inner reveal">
-      <p class="eyebrow">03 · Even serieus</p>
-      <h3>Dingen die ik<br><em>aan jou waardeer.</em></h3>
-      <div class="reason-display"><span id="reasonNumber">01</span><p id="reasonText">Je kunt van een gewone dag iets bijzonders maken.</p></div>
+      <p class="eyebrow">05 · Dingen die jij misschien niet altijd ziet</p>
+      <h3>Waarom ik zo blij ben<br><em>dat jij jij bent.</em></h3>
+      <div class="reason-display"><span id="reasonNumber">01</span><p id="reasonText">Je laat me mezelf zijn zonder mij te judgen.</p></div>
       <button id="reasonButton" class="outline-button">Nog eentje <span>↗</span></button>
     </div>
     <div class="reason-side">∞</div>
   </section>
 
   <section class="stats section">
-    <div class="stat reveal"><strong id="daysTogether">183</strong><span>dagen samen</span></div>
-    <div class="stat reveal"><strong>∞</strong><span>herinneringen nog te maken</span></div>
-    <div class="stat reveal"><strong>1</strong><span>favoriete persoon</span></div>
+    <div class="stat reveal"><strong id="daysTogether">—</strong><span>dagen samen</span></div>
+    <div class="stat reveal"><strong>∞</strong><span>grappen die nog gemaakt worden</span></div>
+    <div class="stat reveal"><strong>1</strong><span>doperwt & sperzieboon</span></div>
   </section>
 
   <section id="muziek" class="music-section section">
     <div class="music-card reveal">
       <div class="vinyl"><div class="vinyl-label">M<br><small>♥</small><br>C</div></div>
       <div class="music-copy">
-        <p class="eyebrow">04 · Een nummer voor jou</p>
-        <h3>Ons liedje<br><em>hoort hier ook bij.</em></h3>
-        <p>Als je later een liedje toevoegt, kan deze knop het voor je afspelen. Tot die tijd is dit gewoon een klein plekje gereserveerd voor een nummer dat bij ons hoort.</p>
-        <button id="musicPlayButton" class="primary-button">Speel ons liedje <span>♫</span></button>
+        <p class="eyebrow">06 · Ons liedje</p>
+        <h3><em>family ties</em><br>— Baby Keem</h3>
+        <p>Ons liedje. En omdat één nummer nooit genoeg is, horen <em>No Ordinary Love</em>, <em>Your Love Is King</em> en <em>My Favourite Part</em> hier stiekem ook bij.</p>
+        <button id="musicPlayButton" class="primary-button">Speel family ties <span>♫</span></button>
+        <p id="musicStatus" class="music-status">Voeg eventueel je eigen <code>assets/song.mp3</code> toe om het lokaal af te spelen.</p>
         <audio id="ourSong" preload="metadata"><source src="assets/song.mp3" type="audio/mpeg"></audio>
       </div>
+    </div>
+  </section>
+
+  <section class="inside section">
+    <div class="inside-inner reveal">
+      <p class="eyebrow">07 · Alleen voor ons</p>
+      <h3>Doperwt.<br><em>Sperzieboon.</em></h3>
+      <div class="inside-grid">
+        <div><strong>Mirthe</strong><span>sperzieboon</span></div>
+        <div><strong>Christian</strong><span>doperwt</span></div>
+      </div>
+      <p class="inside-copy">En dan zijn er natuurlijk nog alle andere dingen die voor iemand anders nergens op slaan. <strong>Josti tosti</strong>. In elkaars zij prikken. Veel te veel knuffelen. En een inside joke die hier absoluut niet komt te staan. 😭</p>
+      <p class="inside-small">Als iemand dit ooit leest: nee, je krijgt geen uitleg.</p>
     </div>
   </section>
 
   <section class="secret-section section">
     <div class="secret-card reveal">
       <div class="secret-lock">✦</div>
-      <p class="eyebrow">05 · Misschien vind je deze</p>
+      <p class="eyebrow">08 · Misschien vind je deze</p>
       <h3>Er zit hier<br><em>nog iets verstopt.</em></h3>
-      <p>Geen zorgen. Je hoeft alleen maar nieuwsgierig genoeg te zijn.</p>
+      <p>Je hoeft alleen maar nieuwsgierig genoeg te zijn.</p>
       <button id="secretButton" class="outline-button">Ik wil het vinden <span>→</span></button>
     </div>
   </section>
@@ -141,40 +170,42 @@
     <div class="secret-reveal-inner reveal">
       <p class="eyebrow">Je hebt hem gevonden.</p>
       <div class="secret-symbol">♥</div>
-      <h3>Ik ben gewoon<br><em>heel blij met jou.</em></h3>
-      <p>Dat is eigenlijk alles. Tussen alle foto's, teksten, plannen en grapjes door is dat misschien wel het belangrijkste wat ik je wil zeggen.</p>
-      <strong>Ik hou van je, Mirthe.</strong>
+      <h3>Dankjewel dat jij<br><em>mij mezelf laat zijn.</em></h3>
+      <p>Je hebt me niet alleen laten zijn wie ik ben bij jou. Je hebt er ook voor gezorgd dat ik mezelf veel meer durf te zijn bij andere mensen.</p>
+      <strong>En dat betekent echt heel veel voor me.</strong>
     </div>
   </section>
 
   <section class="letter section">
     <div class="letter-card reveal">
-      <p class="eyebrow">06 · Nog één ding</p>
-      <h3>Zes maanden.<br><em>Nog lang niet klaar.</em></h3>
+      <p class="eyebrow">Nog één ding</p>
+      <h3>Zes maanden.<br><em>En ik wil nog veel meer.</em></h3>
       <div class="letter-copy">
         <p>Mirthe,</p>
-        <p>Zes maanden geleden begonnen wij aan iets wat inmiddels een van de mooiste delen van mijn leven is geworden.</p>
-        <p>Ik kan onmogelijk alles wat ik voel in een website stoppen. Maar ik kan wel een klein stukje ervan hier achterlaten: de herinneringen, de kleine dingen, de plannen en vooral de persoon met wie ik dat allemaal wil meemaken.</p>
-        <p>Dankjewel voor deze zes maanden. Voor het lachen, de gesprekken, de gekke momenten en alle gewone dagen die door jou toch bijzonder worden.</p>
-        <p class="letter-signoff">Fijne 6 maanden, Mirthe.<br><em>Ik hou van je. ♥</em></p>
+        <p>Op 20 maart vroeg jij mij in het techniek lokaal van JenaXL. Sindsdien is er in zes maanden verrassend veel gebeurd. Van samen skateboarden in Park het Wezenlanden tot de dag op Terschelling, van afspreken in de stad tot gewoon bij jou thuis zitten, en van schoolpauzes tot elkaar weer zien na bijna een maand.</p>
+        <p>Wat ik misschien nog wel het leukste vind, is hoe vrij we samen zijn. Ik hoef bij jou niet iemand anders te zijn. Ik kan gewoon mezelf zijn, en jij doet dat ook. Dat klinkt misschien simpel, maar voor mij is dat heel veel waard.</p>
+        <p>Ik hou van je lach, je openheid, je stem, je ogen en vooral gewoon van jou. Ik hou ervan als jij mij aankijkt, als we samen lachen, als je ineens “doperwt” zegt en als we weer ergens om moeten lachen waar niemand anders iets van begrijpt.</p>
+        <p>En ondanks alles wat jij hebt meegemaakt, blijf je zo positief. Dat is iets wat ik echt bewonder.</p>
+        <p>Dankjewel voor deze zes maanden. Ik hoop dat we over een jaar nog steeds net zo sterk zijn, nog meer van elkaar houden en ondertussen een hele lijst hebben met plekken waar we samen zijn geweest.</p>
+        <p class="letter-signoff">Fijne 6 maanden, sperzieboon.<br><em>Ik hou van je. ♥</em></p>
       </div>
     </div>
   </section>
 
   <section id="toekomst" class="future section">
     <div class="section-heading reveal">
-      <div><p class="eyebrow">07 · Wordt vervolgd</p><h3>Wat we nog<br><em>gaan meemaken.</em></h3></div>
-      <p>Deze lijst mag langzaam langer worden.</p>
+      <div><p class="eyebrow">09 · Wordt vervolgd</p><h3>De wereld<br><em>moeten we nog ontdekken.</em></h3></div>
+      <p>Niet alles hoeft nu gepland te zijn. Sommige dingen zijn leuker als ze vanzelf gebeuren.</p>
     </div>
     <div class="future-grid">
       <div class="future-list reveal">
-        <label><span>01</span><input type="checkbox"> Samen ergens heen waar we nog nooit zijn geweest</label>
-        <label><span>02</span><input type="checkbox"> Veel te veel foto's maken</label>
-        <label><span>03</span><input type="checkbox"> Nog een inside joke creëren die nergens op slaat</label>
-        <label><span>04</span><input type="checkbox"> Weer veel te lang praten voordat we gaan slapen</label>
+        <label><span>01</span><input type="checkbox"> Samen naar Italië 🇮🇹</label>
+        <label><span>02</span><input type="checkbox"> Samen reizen en nieuwe plekken ontdekken</label>
+        <label><span>03</span><input type="checkbox"> Een photobooth-foto maken</label>
+        <label><span>04</span><input type="checkbox"> De wereld stukje voor stukje ontdekken</label>
         <label><span>05</span><input type="checkbox"> Nog een mijlpaal samen vieren ♥</label>
       </div>
-      <div class="future-note reveal"><span>∞</span><p>En wat er daarna ook gebeurt...</p><strong>ik ben blij dat jij erbij bent.</strong></div>
+      <div class="future-note reveal"><span>∞</span><p>Mijn plan voor later?</p><strong>Een nog sterkere relatie, nog meer van elkaar houden en vooral heel veel samen meemaken.</strong></div>
     </div>
   </section>
 
@@ -183,7 +214,7 @@
       <p class="eyebrow">20 september 2026</p>
       <div class="big-heart">♥</div>
       <h3>6 maanden<br><em>met jou.</em></h3>
-      <p>En hopelijk nog heel, heel veel meer.</p>
+      <p>Van doperwt & sperzieboon naar hopelijk nog heel, heel veel meer.</p>
     </div>
   </section>
 
@@ -192,7 +223,12 @@
 
 <div id="lightbox" class="lightbox" aria-hidden="true">
   <button id="closeLightbox" class="close-lightbox" aria-label="Sluiten">×</button>
-  <div class="lightbox-content"><div class="lightbox-art">♥</div><p class="eyebrow">een klein moment</p><h3 id="lightboxTitle">Herinnering</h3><p id="lightboxText">...</p></div>
+  <div class="lightbox-content">
+    <div id="lightboxArt" class="lightbox-art">♥</div>
+    <p class="eyebrow">een klein moment</p>
+    <h3 id="lightboxTitle">Herinnering</h3>
+    <p id="lightboxText">...</p>
+  </div>
 </div>
 <script src="script.js"></script>
 </body>
