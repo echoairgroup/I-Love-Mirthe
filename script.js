@@ -76,7 +76,7 @@ document.querySelectorAll(".future-list input").forEach((box,i)=>{
 const song=$("ourSong"),music=$("musicButton"),play=$("musicPlayButton"),status=$("musicStatus");
 let songAvailable=false;
 song.addEventListener("loadedmetadata",()=>{songAvailable=true;if(status)status.textContent="family ties · klaar om te spelen ♥"});
-song.addEventListener("error",()=>{songAvailable=false;if(status)status.textContent="Voeg jouw bestand toe als assets/song.mp3."});
+song.addEventListener("error",()=>{songAvailable=false;if(status)status.textContent="Het muziekbestand kon niet worden geladen."});
 function setPlaying(on){music.classList.toggle("playing",on);play.innerHTML=on?"Pauzeren <span>Ⅱ</span>":"Speel family ties <span>♫</span>";}
 async function toggleSong(){
  if(!songAvailable){if(status)status.textContent="Er is nog geen audiobestand toegevoegd.";return;}
