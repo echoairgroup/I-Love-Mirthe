@@ -50,7 +50,13 @@ document.querySelectorAll(".memory-card").forEach(card=>{
  const path=card.dataset.image;
  if(path){
   const img=new Image();
-  img.onload=()=>{card.classList.add("has-image");card.style.backgroundImage="url('"+path+"')";const p=card.querySelector(".photo-placeholder");if(p)p.style.opacity="0";};
+  img.onload=()=>{
+   card.classList.add("has-image");
+   card.style.backgroundImage="url('"+path+"')";
+   const p=card.querySelector(".photo-placeholder");
+   if(p)p.style.opacity="0";
+  };
+  img.onerror=()=>card.classList.add("image-error");
   img.src=path;
  }
 });
@@ -59,8 +65,12 @@ const lightbox=$("lightbox"),art=$("lightboxArt");
 document.querySelectorAll(".memory-card").forEach(card=>card.addEventListener("click",()=>{
  $("lightboxTitle").textContent=card.dataset.title||"Herinnering";
  $("lightboxText").textContent=card.dataset.text||"Een klein moment.";
- art.classList.remove("has-image");art.style.backgroundImage="";
- if(card.classList.contains("has-image")){art.classList.add("has-image");art.style.backgroundImage=card.style.backgroundImage;}
+ art.classList.remove("has-image");
+ art.style.backgroundImage="";
+ if(card.classList.contains("has-image")){
+  art.classList.add("has-image");
+  art.style.backgroundImage=card.style.backgroundImage;
+ }
  lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");
 }));
 const closeLightbox=()=>{lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true")};
@@ -75,9 +85,9 @@ document.querySelectorAll(".future-list input").forEach((box,i)=>{
 
 const song=$("ourSong"),music=$("musicButton"),play=$("musicPlayButton"),status=$("musicStatus");
 let songAvailable=false;
-song.addEventListener("loadedmetadata",()=>{songAvailable=true;if(status)status.textContent="family ties · klaar om te spelen ♥"});
+song.addEventListener("loadedmetadata",()=>{songAvailable=true;if(status)status.textContent="Good Flirts · klaar om te spelen ♥"});
 song.addEventListener("error",()=>{songAvailable=false;if(status)status.textContent="Het muziekbestand kon niet worden geladen."});
-function setPlaying(on){music.classList.toggle("playing",on);play.innerHTML=on?"Pauzeren <span>Ⅱ</span>":"Speel family ties <span>♫</span>";}
+function setPlaying(on){music.classList.toggle("playing",on);play.innerHTML=on?"Pauzeren <span>Ⅱ</span>":"Speel Good Flirts <span>♫</span>";}
 async function toggleSong(){
  if(!songAvailable){if(status)status.textContent="Er is nog geen audiobestand toegevoegd.";return;}
  try{if(song.paused){await song.play();setPlaying(true)}else{song.pause();setPlaying(false)}}catch(_){if(status)status.textContent="Afspelen lukte niet. Probeer opnieuw."}
@@ -91,7 +101,7 @@ $("secretButton").addEventListener("click",()=>{
  setTimeout(()=>secret.querySelector(".reveal").classList.add("visible"),350);makeHeartBurst(20);
 });
 
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&lightbox.classList.contains("open"))closeLightbox()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&lightbox.classList.contains("open"))closeLightbox});
 function makeHeartBurst(count=12){
  const holder=$("hearts");
  for(let i=0;i<count;i++){
