@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0a0d">
+  <meta name="description" content="A little place for us.">
+  <title>For Mirthe ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hearts" class="floating-hearts" aria-hidden="true"></div>
+
+  <section id="lockScreen" class="lock-screen">
+    <div class="lock-glow"></div>
+    <div class="lock-content">
+      <div class="mini-heart">♥</div>
+      <p class="eyebrow">A little place for us</p>
+      <h1>For <em>Mirthe</em>.</h1>
+      <p class="lock-copy">There is a tiny secret waiting behind this door.</p>
+      <form id="passwordForm" class="password-form">
+        <label for="password" class="sr-only">Password</label>
+        <div class="password-wrap">
+          <input id="password" type="password" inputmode="numeric" autocomplete="off" maxlength="4" placeholder="••••" aria-describedby="passwordMessage">
+          <button type="button" id="showPassword" class="eye-button" aria-label="Show password">○</button>
+        </div>
+        <button class="primary-button" type="submit">Open our story <span>→</span></button>
+        <p id="passwordMessage" class="password-message" aria-live="polite"></p>
+      </form>
+      <p class="tiny-note">made with love · just for us</p>
+    </div>
+  </section>
+
+  <main id="site" class="site" aria-hidden="true">
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Home">M<span>♥</span>C</a>
+      <nav>
+        <a href="#story">Our story</a>
+        <a href="#memories">Memories</a>
+        <a href="#reasons">Why you</a>
+        <a href="#future">Future</a>
+      </nav>
+      <button id="musicButton" class="music-button" aria-label="Toggle music"><span>♫</span><i></i></button>
+    </header>
+
+    <section id="top" class="hero">
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">September 2026 · six months</p>
+        <h2>Mirthe <span>&</span><br><em>Christian</em></h2>
+        <p class="hero-line">Six months of us.<br><strong>And somehow, it still feels like the beginning.</strong></p>
+        <a class="scroll-link" href="#story"><span>↓</span> explore our story</a>
+      </div>
+      <div class="hero-side-note">01 / 06<br><span>our story</span></div>
+    </section>
+
+    <section class="intro section">
+      <div class="section-number">01</div>
+      <div class="intro-grid reveal">
+        <p class="eyebrow">Dear Mirthe,</p>
+        <div>
+          <h3>I made you a little<br><em>corner of the internet.</em></h3>
+          <p class="large-copy">Because six months deserves more than just a message. It deserves a place for the little things: the memories, the laughs, the moments that only make sense to us, and everything we still have ahead of us.</p>
+          <p class="signature">— Christian <span>♥</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story section">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">02 · The timeline</p><h3>How we got <em>here.</em></h3></div>
+        <p>One story, a thousand little moments.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">THE BEGINNING</div>
+          <div class="timeline-card">
+            <span class="timeline-icon">✦</span>
+            <h4>And then there was us.</h4>
+            <p>Replace this with the story of when you two met or when everything started. This is your first chapter.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">CHAPTER TWO</div>
+          <div class="timeline-card">
+            <span class="timeline-icon">♡</span>
+            <h4>The moments in between.</h4>
+            <p>The random conversations. The stupid jokes. The ordinary days that somehow became some of your favorite days.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">SIX MONTHS</div>
+          <div class="timeline-card highlight">
+            <span class="timeline-icon">♥</span>
+            <h4>Look at us now.</h4>
+            <p>Six months together. There is so much we have already shared, and even more that has not happened yet.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="memories" class="memories section">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">03 · The gallery</p><h3>Little pieces of <em>us.</em></h3></div>
+        <p>Click a memory to make it bigger.</p>
+      </div>
+      <div class="photo-grid">
+        <button class="memory-card memory-a reveal" data-title="A favorite moment" data-text="Add your own memory here." aria-label="Open memory">
+          <span class="photo-placeholder">YOUR<br>PHOTO</span><span class="memory-caption">our favorite kind of day</span>
+        </button>
+        <button class="memory-card memory-b reveal" data-title="Another little moment" data-text="Add the story behind this photo." aria-label="Open memory">
+          <span class="photo-placeholder">YOUR<br>PHOTO</span><span class="memory-caption">just us being us</span>
+        </button>
+        <button class="memory-card memory-c reveal" data-title="A memory worth keeping" data-text="Write something only the two of you would understand." aria-label="Open memory">
+          <span class="photo-placeholder">YOUR<br>PHOTO</span><span class="memory-caption">one for the scrapbook</span>
+        </button>
+        <button class="memory-card memory-d reveal" data-title="One more" data-text="This space is yours." aria-label="Open memory">
+          <span class="photo-placeholder">YOUR<br>PHOTO</span><span class="memory-caption">and many more to come</span>
+        </button>
+      </div>
+      <p class="gallery-hint reveal">Tip: later, replace the placeholders with your own photos in the HTML.</p>
+    </section>
+
+    <section id="reasons" class="reasons section">
+      <div class="reasons-inner reveal">
+        <p class="eyebrow">04 · A small list</p>
+        <h3>Things I love<br><em>about you.</em></h3>
+        <div class="reason-display">
+          <span id="reasonNumber">01</span>
+          <p id="reasonText">The way you can make an ordinary day feel special.</p>
+        </div>
+        <button id="reasonButton" class="outline-button">Give me another reason <span>↗</span></button>
+      </div>
+      <div class="reason-side">∞</div>
+    </section>
+
+    <section class="stats section">
+      <div class="stat reveal"><strong>6</strong><span>months</span></div>
+      <div class="stat reveal"><strong>∞</strong><span>memories to make</span></div>
+      <div class="stat reveal"><strong>1</strong><span>favorite person</span></div>
+    </section>
+
+    <section class="letter section">
+      <div class="letter-card reveal">
+        <p class="eyebrow">05 · Open when you need a smile</p>
+        <h3>Six months.<br><em>Still you.</em></h3>
+        <div class="letter-copy">
+          <p>Mirthe,</p>
+          <p>Six months ago, we started something that has become one of the most important parts of my life. I don't want to pretend I can fit everything I feel into a website, because I definitely can't.</p>
+          <p>But I can put a few pieces here. The memories. The laughs. The little things. The things I love about you. And a reminder that there are still so many chapters waiting for us.</p>
+          <p>Thank you for these six months. For being you, for being there, and for making so many normal moments feel like memories I want to keep forever.</p>
+          <p class="letter-signoff">Happy 6 months, Mirthe.<br><em>I love you. ♥</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="future" class="future section">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">06 · To be continued</p><h3>Things we <em>still</em> have to do.</h3></div>
+      </div>
+      <div class="future-grid">
+        <div class="future-list reveal">
+          <label><span>01</span><input type="checkbox"> Go somewhere we've never been</label>
+          <label><span>02</span><input type="checkbox"> Take way too many photos together</label>
+          <label><span>03</span><input type="checkbox"> Make another ridiculous inside joke</label>
+          <label><span>04</span><input type="checkbox"> Have another late-night conversation</label>
+          <label><span>05</span><input type="checkbox"> Celebrate another milestone ♥</label>
+        </div>
+        <div class="future-note reveal"><span>∞</span><p>And whatever happens next...</p><strong>I'm glad it's with you.</strong></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-heart">♥</div>
+      <p>Made for Mirthe, with love.</p>
+      <span>six months · and counting</span>
+    </footer>
+  </main>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeLightbox" class="close-lightbox" aria-label="Close">×</button>
+    <div class="lightbox-content">
+      <div class="lightbox-art">♥</div>
+      <p class="eyebrow">a little memory</p>
+      <h3 id="lightboxTitle">Memory</h3>
+      <p id="lightboxText">...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
